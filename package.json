@@ -1,0 +1,34 @@
+{
+  "name": "dsh-credit-compass",
+  "version": "1.2.0",
+  "private": true,
+  "type": "module",
+  "description": "Credits Compass — follows the selected model and points the sidebar foot at that account's remaining credits (WorkBuddy) or balance (other providers), picks the wallet currency by region with a manual override, and offers a detail panel plus a manual refresh.",
+  "license": "MIT",
+  "icon": "./icon.svg",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-sidebar"
+      ]
+    }
+  }
+}

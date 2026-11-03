@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Credits Compass",
+    "description": "Follows the selected model and points the sidebar foot at that account's remaining credits or balance, picks the wallet currency by region with a manual override, and supports a detail panel with a manual refresh."
+  }
+}
